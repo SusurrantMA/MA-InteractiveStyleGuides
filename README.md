@@ -2,7 +2,7 @@
 
 Interactve's Bootstrap Brand Style guides
 
-# Current Teams
+## Current Teams
 dna - Jeff and Elliot (CS-106024)
 Isotonix - Matthew and Jesus (CS-105974)
 Layered - John and Walter (CS-106023)
