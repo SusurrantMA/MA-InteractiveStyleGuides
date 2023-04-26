@@ -1,0 +1,2704 @@
+  /* --- YOUR CODE STARTS HERE --- */
+  :root {
+      /* --- colors --- */
+      --black: #000;
+      --dark--gray: #585555;
+      --light--gray: #eee;
+      --transparent: transparent;
+      --white: #fff;
+
+      /* --- fonts --- */
+
+      /* --- universal font - replaces gotham for web --- */
+      --font__montserrat: 'Montserrat', sans-serif;
+
+      /* --- tls font --- */
+      --font__lato: "Lato", sans-serif;
+
+      /* --- motives font --- */
+      --font__bodoni: 'Bodoni Moda', serif;
+
+
+      --font--size: 18px;
+
+      /* --- Branding colors --- */
+
+      /* --- TLS --- */
+      --tls__light--blue: #239ddf;
+      --tls__dark--blue: #145f88;
+      --tls__green: #c6e605;
+      --tls__orange: #fabe78;
+
+
+      /* --- Motives --- */
+
+      /* --- Layered --- */
+
+      /* --- LDV --- */
+  }
+
+
+  :not(style):not(link):not(meta):not(script)~section {
+      margin-top: 0;
+  }
+
+  /* --- Montserrat --- */
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+  #styleguide {
+      color: #000000;
+      font-family: var(--font__montserrat);
+      font-size: var(--font--size);
+      line-height: 2;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  #styleguide * {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+  }
+
+  #styleguide .row {
+      margin: 0;
+  }
+
+  /* --- headings --- */
+
+  #styleguide h1,
+  #styleguide h2,
+  #styleguide h3,
+  #styleguide h4,
+  #styleguide h5,
+  #styleguide h6 {
+      line-height: 1.2;
+      margin: 0;
+      padding: 0;
+      font-weight: 500;
+      text-align: center;
+  }
+
+  #styleguide h1 {
+      color: var(--white);
+      font-size: 3.5rem;
+
+  }
+
+  #styleguide h2 {
+      color: var(--white);
+      font-size: 2rem;
+  }
+
+  #styleguide h3 {
+      font-size: 2.5rem;
+  }
+
+  #styleguide h4 {
+      font-size: 2rem;
+  }
+
+  #styleguide h5 {
+      font-size: 1.5rem;
+  }
+
+  #styleguide h6 {
+      font-size: 1rem;
+  }
+
+  #styleguide img {
+      width: 100%;
+      max-width: 100%;
+  }
+
+  #styleguide p {
+      font-weight: 300;
+      margin: 0 0 1em 0;
+  }
+
+  #styleguide section {
+      margin: 0 auto;
+      padding: 0;
+  }
+
+  /* #styleguide .full__width {
+        left: calc(-50vw + 50%);
+        position: relative;
+        width: 100vw;
+    } */
+
+  /*--- BUTTONS ---*/
+
+  /* --- default button ---*/
+  #styleguide a.btn {
+      background: var(--black);
+      border-radius: 0;
+      color: var(--white);
+      cursor: pointer;
+      display: inline-block;
+      font-style: normal;
+      font-weight: 500;
+      margin: 0.5rem 0;
+      padding: 0.75em 1.25em;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all ease-in-out 250ms;
+  }
+
+  #styleguide a.btn:hover,
+  #styleguide a.btn:focus {
+      background: var(--dark--gray);
+      border: none;
+      color: var(--white);
+  }
+
+  /* --- primary button --- */
+
+  #styleguide a.btn--primary {
+      background: var(--black);
+      border: none;
+      color: var(--white);
+  }
+
+  #styleguide a.btn--primary:hover,
+  #styleguide a.btn--primary:focus {
+      background: var(--dark--gray);
+      border: none;
+      color: var(--white);
+      box-shadow: 0px 10px 8px -10px rgba(0, 0, 0, .75);
+      transform: translateY(-10px);
+  }
+
+
+  /* ---- secondary button ---- */
+  #styleguide a.btn--secondary {
+      background: var(--white);
+      color: var(--black);
+      transition: all ease-in-out 250ms;
+  }
+
+  #styleguide a.btn--secondary:hover,
+  #styleguide a.btn--secondary:focus {
+      background: var(--light--gray);
+      border: none;
+      color: var(--black);
+      transform: scale(1.2);
+  }
+
+  /* ---- light button ---- */
+
+  #styleguide a.btn--light {
+      background: var(--white);
+      color: var(--black);
+      border: 3px solid var(--white);
+  }
+
+  #styleguide a.btn--light:hover,
+  #styleguide a.btn--light:focus {
+      background: transparent;
+      border: 3px solid var(--white);
+      color: var(--white);
+  }
+
+  /* ---- dark button ---- */
+  #styleguide a.btn--dark {
+      background: var(--black);
+      color: var(--white);
+      transition: all ease-in-out 250ms;
+      z-index: 1;
+  }
+
+  #styleguide a.btn--dark:hover,
+  #styleguide a.btn--dark:focus {
+      background: var(--light--gray);
+      border: none;
+      color: var(--white);
+      position: relative;
+      transform: scale(1.2);
+  }
+
+  #styleguide a.btn--dark::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+      transition: transform 200ms ease-in;
+  }
+
+  #styleguide a.btn--dark::after {
+      transform: scaleX(0);
+      transform-origin: right;
+  }
+
+  #styleguide a.btn--dark:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+  }
+
+  #styleguide a.btn--dark::after {
+      transform: scaleX(0);
+      transform-origin: right;
+  }
+
+  #styleguide a.btn--dark:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+  }
+
+  /* -- download button ---*/
+
+  #styleguide a.btn__download {
+      background: var(--transparent);
+      color: var(--black);
+      border: 4px solid var(--black);
+      margin: 0.5rem 0;
+      padding: 0.5em 1em;
+  }
+
+  #styleguide a.btn__download:hover,
+  #styleguide a.btn__download:focus {
+      background: var(--dark--gray);
+      color: var(--white);
+      border: 4px solid var(--dark--gray);
+  }
+
+  /* -- logos button ---*/
+
+  #styleguide a.btn__logos {
+      background: var(--transparent);
+      color: var(--white);
+      border: 4px solid var(--white);
+      margin: 0.5rem 0;
+      padding: 0.5em 1em;
+      text-decoration: none;
+  }
+
+  #styleguide a.btn__logos:hover,
+  #styleguide a.btn__logos:focus {
+      background: var(--dark--gray);
+      color: var(--white);
+      border: 4px solid var(--dark--gray);
+  }
+
+
+  /* -- motives button ---*/
+
+  #styleguide a.btn__logos--dark {
+      background: var(--transparent);
+      color: var(--black);
+      border: 4px solid var(--black);
+      margin: 0.5rem 0;
+      padding: 0.5em 1em;
+      text-decoration: none;
+  }
+
+  #styleguide a.btn__logos--dark:hover,
+  #styleguide a.btn__logos--dark:focus {
+      background: var(--white);
+      color: var(--dark--gray);
+      border: 4px solid var(--dark--gray);
+  }
+
+  /* -- tls button ---*/
+
+  #styleguide a.btn__tls {
+      background: var(--tls__dark--blue);
+      color: var(--white);
+      margin: 0.5rem 1rem;
+      padding: 0.5rem 1rem;
+  }
+
+  #styleguide a.btn__tls:hover,
+  #styleguide a.btn__tls:focus {
+      background: var(--tls__orange);
+      color: var(--tls__dark--blue);
+  }
+
+
+  /* beginning of custom CSS */
+
+  /* --- nav ---*/
+  #styleguide .navbar {
+      background-color: var(--black);
+      border-bottom: 1px solid var(--white);
+  }
+
+  #styleguide .navbar-brand {
+      width: 60%;
+  }
+
+  #styleguide .navbar li a {
+      color: var(--white);
+  }
+
+  #styleguide .navbar li a:hover {
+      color: var(--black);
+      background-color: #FEE834;
+  }
+
+  #styleguide .dropdown-menu {
+      background-color: var(--white);
+  }
+
+  #styleguide .dropdown-menu li a {
+      color: var(--black);
+  }
+
+  #styleguide .toggle-color {
+      background-color: var(--white);
+  }
+
+  /* --- hero --- */
+
+  #styleguide .hero {
+      /* background: url('https://images.marketamerica.com/cdn/Interactive-bootstrap-template/html/homepage/img/vid/space-vid.mp4'); */
+      background-color: var(--black);
+      background-size: cover;
+      padding-top: 25vh;
+      padding-bottom: 15vh;
+      position: relative;
+  }
+
+  #styleguide .hero p {
+      color: var(--white);
+      text-align: center;
+  }
+
+  #styleguide .hero .arrow {
+      width: 5%;
+  }
+
+  #styleguide #myVideo {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+  }
+
+  #styleguide .hero img {
+      width: 70%;
+      padding: 2rem 0;
+  }
+
+  #styleguide .hero__content {
+      background-color: var(--white);
+      color: var(--black);
+      padding: 2em;
+      text-align: center;
+      width: 80vw;
+  }
+
+  #styleguide .hero h3 {
+      color: var(--white);
+      font-size: 1.5rem;
+      padding-top: 2em;
+  }
+
+
+
+  /* --- title --- */
+
+  #styleguide .title {
+      background-color: var(--white);
+  }
+
+  #styleguide .title--dark {
+      color: var(--white);
+      background-color: var(--black);
+  }
+
+  #styleguide .title--dark p {
+      text-align: center;
+  }
+
+
+  /* -- banner --- */
+
+  #styleguide .banner {
+      background-color: var(--white);
+  }
+
+  /* --- intro --- */
+  #styleguide .intro {
+      background-color: var(--white);
+  }
+
+  #styleguide .intro--light {
+      background-color: var(--light--gray);
+  }
+
+  #styleguide .intro--dark {
+      background-color: var(--dark--gray);
+  }
+
+  /* --- gallery --- */
+  #styleguide .gallery {
+      background-color: var(--white);
+  }
+
+  #styleguide .gallery--light {
+      background-color: var(--light--gray);
+  }
+
+  #styleguide .gallery--dark {
+      background-color: var(--dark--gray);
+  }
+
+  /* -- about --- */
+
+  #styleguide .about {
+      background-color: var(--white);
+  }
+
+  #styleguide .about__paragraph {
+      text-align: center;
+  }
+
+  /* --- product  --- */
+
+  #styleguide .product {
+      background-color: var(--white);
+  }
+
+  #styleguide .product--light {
+      background-color: var(--light--gray);
+  }
+
+  #styleguide .product--dark {
+      background-color: var(--dark--gray);
+      color: var(--white);
+  }
+
+  /* review */
+
+  #styleguide .review {
+      background-color: var(--white);
+  }
+
+  #styleguide .review--light {
+      background-color: var(--light--gray);
+  }
+
+  #styleguide .review__display {
+      position: relative;
+      width: 100px;
+      margin: .5em 0 1.75em 0;
+  }
+
+  #styleguide .review__stars--background {
+      background: url("https://images.marketamerica.com/cdn/interactive-bootstrap-template/images/star_blk.svg");
+      opacity: .25;
+      position: relative;
+      height: 20px;
+      width: 100px;
+  }
+
+  /* NOTE: brand__star.svg has the brand colors already in the svg so you just have to adjust the id at the end to whatever brand you need */
+
+  #styleguide .review__stars {
+      background: url("https://images.marketamerica.com/cdn/interactive-bootstrap-template/images/brand_star.svg?#tls__dark--blue") repeat-x left/20px 20px;
+      display: block;
+      left: 0;
+      overflow: hidden;
+      position: absolute;
+      opacity: 1;
+      top: 0;
+      height: 19px;
+  }
+
+  #styleguide .review__paragraph {
+      text-align: center;
+      width: 100%;
+  }
+
+  /* --- benefits ---- */
+
+  #styleguide .benefits {
+      background-color: var(--white);
+  }
+
+  #styleguide .benefits--light {
+      background-color: var(--light--gray);
+  }
+
+  #styleguide .benefits--dark {
+      background-color: var(--dark--gray);
+      color: var(--white);
+  }
+
+  /* --- new ---*/
+
+  #styleguide .new {
+      background-color: var(--white);
+  }
+
+  #styleguide .new--light {
+      background-color: var(--light--gray);
+  }
+
+  #styleguide .new--dark {
+      background-color: var(--dark--gray);
+  }
+
+  #styleguide .new__heading {
+      animation: pulse 1.5s infinite;
+  }
+
+  @keyframes pulse {
+      0 {
+          transform: scale(1);
+      }
+
+      50% {
+          transform: scale(1.25);
+      }
+
+      100% {
+          transform: scale(1);
+      }
+  }
+
+  #styleguide .new__content--dark {
+      background-color: var(--black);
+      color: var(--white);
+  }
+
+
+  /* --- category --- */
+
+  #styleguide .category {
+      background-color: var(--white);
+  }
+
+  #styleguide .category--light {
+      background-color: var(--light--gray);
+  }
+
+  #styleguide .category--dark {
+      background-color: var(--dark--gray);
+  }
+
+  #styleguide .category__content {
+      height: 100%;
+      padding-bottom: 2em;
+      text-align: center;
+  }
+
+  #styleguide .category__box {
+      flex: 0;
+  }
+
+  #styleguide .category__content h6 {
+      flex: 0;
+  }
+
+  #styleguide .category__content h4 {
+      flex: 1 0 auto;
+  }
+
+
+  /* --- stepOne ---*/
+
+  #styleguide .stepOne {
+      background-color: var(--white);
+  }
+
+  #styleguide .stepOne--light {
+      background-color: var(--light--gray);
+  }
+
+  #styleguide .stepOne--dark {
+      background-color: var(--dark--gray);
+      color: var(--white);
+  }
+
+  #styleguide .stepOne__content--dark {
+      background-color: var(--black);
+      color: var(--white);
+  }
+
+  #styleguide .stepOne__img {
+      background: url('https://via.placeholder.com/800.png/000') no-repeat;
+      background-size: contain;
+      background-position: center;
+      height: 65vh;
+  }
+
+  #styleguide .stepOne__img:hover {
+      background: url('https://via.placeholder.com/800.png/eee') no-repeat;
+      background-size: contain;
+      background-position: center;
+      height: 65vh;
+  }
+
+  /* -- logos --*/
+  #styleguide .logos {
+      padding: 10vh 5vh;
+  }
+
+  /* -- logo images --*/
+  #styleguide .logos__content .logo-img {
+      height: 20vh;
+      width: 100%;
+  }
+
+  #styleguide .logo-img img {
+      height: 100%;
+  }
+
+  /* -- logos ---*/
+
+  #styleguide .logos--dark {
+      background-color: var(--black);
+      color: var(--white);
+  }
+
+  #styleguide .logos--light {
+      background-color: var(--white);
+  }
+
+  #styleguide .logos--layered {
+      background-color: #F0ECE8;
+  }
+
+  #styleguide .logos--dna {
+      background-color: #E9F4F0;
+  }
+
+  #styleguide .logos--isotonix {
+      background-color: #894082;
+  }
+
+  #styleguide .logos--ldv {
+      background-color: #7f6c50;
+  }
+
+  #styleguide .logos--royal {
+      background-color: #e9e9e9;
+  }
+
+  #styleguide .logos--tls {
+      background-color: #145f88;
+  }
+
+  /* --- download ---*/
+
+  #styleguide .download--light {
+      background-color: var(--light--gray);
+  }
+
+  #styleguide .download--dark {
+      background-color: var(--dark--gray);
+  }
+
+  #styleguide .logos__img {
+      width: 50px;
+      height: 50px;
+  }
+
+
+  /* --- default ---*/
+
+  #styleguide .default {
+      background-color: var(--white);
+  }
+
+  #styleguide .default--light {
+      background-color: var(--light--gray);
+  }
+
+  #styleguide .default--dark {
+      background-color: var(--dark--gray);
+      color: var(--white);
+  }
+
+  #styleguide .default__heading {
+      margin-bottom: .6em;
+  }
+
+  /* --- video ---*/
+
+  #styleguide .video {
+      background-color: var(--white);
+  }
+
+  #styleguide .video--light {
+      background-color: var(--light--gray);
+  }
+
+  #styleguide .video--dark {
+      background-color: var(--dark--gray);
+      color: var(--white);
+  }
+
+  #styleguide .video__content {
+      background-color: black;
+  }
+
+  /* --- social ---*/
+  #styleguide .social {
+      font-size: .8rem;
+  }
+
+  #styleguide .social--light {
+      background-color: var(--light--gray);
+  }
+
+  #styleguide .social--dark {
+      background-color: var(--dark--gray);
+      color: var(--white);
+  }
+
+  #styleguide .social__box {
+      margin-right: 1em;
+  }
+
+  #styleguide .social__box:last-child {
+      margin-right: 0em;
+  }
+
+  /* --- terms ---*/
+
+  #styleguide .terms {
+      font-size: .8rem;
+  }
+
+  #styleguide .terms--light {
+      background-color: var(--light--gray);
+  }
+
+  #styleguide .terms--dark {
+      background-color: var(--dark--gray);
+      color: var(--white);
+  }
+
+
+  /* --- UF PRICING --- */
+  #styleguide p.pricing {
+      color: #000;
+      margin-bottom: 1.5em;
+      text-align: center;
+  }
+
+  #styleguide p.pricing>span {
+      background: rgba(0, 0, 0, 0.75);
+      display: inline-block;
+      height: 30px;
+      line-height: 30px;
+      margin: 0 1em -0.5em;
+      width: 1px;
+  }
+
+  @media (min-width: 576px) {
+
+      /* .hero  */
+      #styleguide .hero__content {
+          width: 50vw;
+      }
+
+      #styleguide .hero p {
+          width: 50%;
+      }
+
+      #styleguide .navbar-brand {
+          width: 25%;
+      }
+
+
+      #styleguide .review__paragraph {
+          width: 60%;
+      }
+
+      #styleguide .stepOne__img {
+          height: 50vh;
+      }
+
+      #styleguide .stepOne__img:hover {
+          height: 50vh;
+
+      }
+
+      /* -- .step2 */
+      /* .combo */
+      /* -- .download  */
+      /* -- .logos */
+      /* .icons */
+      /* .brands */
+      /* .video */
+      /* .social */
+      /* .terms */
+
+
+  }
+
+  /* -------------------------------- Motives styles ----------------------------------------------*/
+
+  #styleguide-motives {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--black);
+      font-size: var(--font--size);
+  }
+
+  #styleguide-motives img {
+      width: 100%;
+  }
+
+  #styleguide-motives p {
+      color: var(--black);
+  }
+
+  #styleguide-motives h1,
+  #styleguide-motives h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--black);
+      font-size: 1.8rem;
+      font-weight: bold;
+  }
+
+  #styleguide-motives h3 {
+      font-size: 1.4rem;
+  }
+
+  #styleguide-motives .secTitle h1 {
+      color: var(--black);
+      margin-left: 15px;
+  }
+
+
+  /* --- sectOne --*/
+
+  #styleguide-motives .sectOne-brandIntro {
+      background: url('https://images.marketamerica.com/creative/2022/motives-usa-106020-interactive-styleguide/images/motives-hero.jpg') no-repeat;
+      background-size: 280%;
+      background-position: 35% 0;
+      background-attachment: fixed;
+  }
+
+  #styleguide-motives .introLogo-container {
+      padding: 10vh;
+  }
+
+  #styleguide-motives .introLogo-wrapper {
+      height: 40vh;
+  }
+
+  /* --- font block one ---*/
+
+  #styleguide-motives .fontTwo p,
+  #styleguide-motives .fontTwo h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 200;
+  }
+
+  #styleguide-motives .fontThree p,
+  #styleguide-motives .fontThree h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+  }
+
+  /* -- color circles --*/
+
+  #styleguide-motives .color-white {
+      background-color: #fff;
+      border: 1px solid var(--black);
+      border-radius: 50%;
+  }
+
+  #styleguide-motives .color-black {
+      background-color: var(--black);
+      border-radius: 50%;
+
+  }
+
+  /* -- buttons --*/
+
+  #styleguide-motives .btn-text-primary {
+      color: var(--black);
+  }
+
+  #styleguide-motives .btn-text-primary::after {
+      background: var(--black);
+  }
+
+  #styleguide-motives .btn-text-hover {
+      color: #7d838a;
+  }
+
+  #styleguide-motives .btn-text-hover::after {
+      background: #7d838a;
+  }
+
+  #styleguide-motives .dark-backdrop h3 {
+      color: #fff;
+  }
+
+  #styleguide-motives .dark-backdrop p {
+      color: #fff;
+  }
+
+  #styleguide-motives .dark-backdrop .btn-text-primary {
+      color: #fff;
+  }
+
+  #styleguide-motives .dark-backdrop .btn-text-primary:after {
+      background: #fff;
+  }
+
+  /* -- icons --*/
+
+  #styleguide-motives .iconTwo {
+      width: 75%;
+  }
+
+  #styleguide-motives .iconThree {
+      width: 50%;
+  }
+
+
+  @media screen and (min-width: 600px) {
+
+      #styleguide-motives .sectOne-brandIntro {
+          background-size: 180%;
+          background-position: 50% 0;
+      }
+  }
+
+  /* ----------------------------------------DNA styles --------------------------------*/
+
+  /* Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  @import url("https://use.typekit.net/jnk5fug.css");
+
+  /* HTML Reset */
+  /* Box sizing rules */
+  #styleguide-dna *,
+  #styleguide-dna *::before,
+  #styleguide-dna *::after {
+      box-sizing: border-box;
+  }
+
+  /* Remove default margin */
+  #styleguide-dna body,
+  #styleguide-dna h1,
+  #styleguide-dna h2,
+  #styleguide-dna h3,
+  #styleguide-dna h4,
+  #styleguide-dna p,
+  #styleguide-dna figure,
+  #styleguide-dna blockquote,
+  #styleguide-dna dl,
+  #styleguide-dna dd {
+      margin: 0;
+  }
+
+  #styleguide-dna h1,
+  #styleguide-dna h2,
+  #styleguide-dna h3,
+  #styleguide-dna h4,
+  #styleguide-dna h5,
+  #styleguide-dna h6 {
+      text-transform: lowercase;
+  }
+
+
+  /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+  #styleguide-dna ul[role='list'],
+  #styleguide-dna ol[role='list'] {
+      list-style: none;
+  }
+
+  /* Set core root defaults */
+  #styleguide-dna html:focus-within {
+      scroll-behavior: smooth;
+  }
+
+  /* Set core body defaults */
+  #styleguide-dna body {
+      min-height: 100vh;
+      text-rendering: optimizeSpeed;
+      font-family: 'urbane-rounded', Arial, Helvetica, sans-serif;
+      text-transform: lowercase;
+      font-size: 16px;
+      color: #2a2d2e;
+  }
+
+  /* A elements that don't have a class get default styles */
+  #styleguide-dna a:not([class]) {
+      text-decoration-skip-ink: auto;
+  }
+
+  /* Make images easier to work with */
+  #styleguide-dna img,
+  #styleguide-dna picture {
+      max-width: 100%;
+      display: block;
+      margin: auto;
+  }
+
+  /* Inherit fonts for inputs and buttons */
+  #styleguide-dna input,
+  #styleguide-dna button,
+  #styleguide-dna textarea,
+  #styleguide-dna select {
+      font: inherit;
+  }
+
+  /* Global Classes */
+  #styleguide-dna .circle {
+      border-radius: 50%;
+  }
+
+  #styleguide-dna .dark-backdrop {
+      background: #000000;
+  }
+
+  /* Sections globals */
+  #styleguide-dna .secTitle {
+      color: #59616a;
+      margin: 0;
+      padding: 2vw 0;
+      border-top: 1px solid #e5e5e5;
+      border-bottom: 1px solid #e5e5e5;
+      text-align: left;
+  }
+
+  #styleguide-dna .content-wrapper {
+      padding: 15vw 5vw;
+  }
+
+  /* sectOne */
+
+  #styleguide-dna .sectOne-brandIntro {
+      background: rgba(140, 196, 179, 0.2) url("https://images.marketamerica.com/creative/2023/interactive-106024-bootstrap-style-guide-dna-elliot-jeff/dna-miracles®-uscan-aus-gbr-hk-tw-sg-logo-labels-white.png") no-repeat center center;
+
+  }
+
+  #styleguide-dna .introLogo-container {
+      padding: 20vw;
+  }
+
+  /* sectTwo */
+  #styleguide-dna .sectTwo-brandLogos {
+      text-align: center;
+  }
+
+  #styleguide-dna .logos-container {
+      text-align: center;
+  }
+
+  #styleguide-dna .logos-container h2 {
+      align-self: flex-start;
+      margin-bottom: 15px;
+  }
+
+  #styleguide-dna .logoSVG {
+      padding: 15vw 5vw;
+  }
+
+  #styleguide-dna .logoAlt {
+      padding: 15vw 5vw;
+  }
+
+  #styleguide-dna .logoAlt h2 {
+      color: #ffffff;
+  }
+
+  #styleguide-dna .logo-block {
+      margin-top: 3vw;
+  }
+
+  #styleguide-dna .logo-block:first-of-type {
+      margin-top: 0;
+  }
+
+  /* sectThree */
+
+  #styleguide-dna .fonts-row {
+      padding-bottom: 5vw;
+  }
+
+  #styleguide-dna .fonts-row:last-of-type {
+      padding-bottom: 0;
+  }
+
+  #styleguide-dna .fonts-row h3 {
+      margin-bottom: 3vw;
+      color: #59616a;
+  }
+
+  #styleguide-dna .fonts-wrapper {
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+
+  #styleguide-dna .fontOne h1 {
+      margin-bottom: 5px;
+      color: #2a2d2e;
+      font-weight: 100;
+  }
+
+  #styleguide-dna .fontOne p {
+      margin-bottom: 2px;
+      color: #59616a;
+      font-weight: lighter;
+  }
+
+  #styleguide-dna .fontOne a {
+      color: #1f66a5;
+      text-decoration: none;
+
+  }
+
+  #styleguide-dna .fontTwo {
+      margin-bottom: 5vw;
+  }
+
+  #styleguide-dna .fontTwo h1 {
+      margin-bottom: 5px;
+      color: #2a2d2e;
+      font-weight: 500;
+  }
+
+  #styleguide-dna .fontTwo p {
+      margin-bottom: 2px;
+      color: #59616a;
+      font-weight: 500;
+  }
+
+  #styleguide-dna .fontTwo a {
+      color: #1f66a5;
+      text-decoration: none;
+  }
+
+  #styleguide-dna .fontThree h1 {
+      margin-bottom: 5px;
+      font-weight: bold;
+  }
+
+  #styleguide-dna .fontThree p {
+      margin-bottom: 2px;
+      color: #59616a;
+      font-weight: bold;
+  }
+
+  #styleguide-dna .fontThree a {
+      color: #1f66a5;
+      text-decoration: none;
+  }
+
+  /* sectFour */
+
+  #styleguide-dna .typography-block {
+      font-weight: bold;
+      padding-bottom: 8vw;
+  }
+
+  #styleguide-dna .typography-block li,
+  #styleguide-dna .typography-block p,
+  #styleguide-dna .typography-block h1,
+  #styleguide-dna .typography-block h2,
+  #styleguide-dna .typography-block h3,
+  #styleguide-dna .typography-block h4,
+  #styleguide-dna .typography-block h5,
+  #styleguide-dna .typography-block h6 {
+      margin-bottom: 15px;
+      text-transform: lowercase;
+  }
+
+  #styleguide-dna .typography-block h1,
+  #styleguide-dna .typography-block h2,
+  #styleguide-dna .typography-block h3,
+  #styleguide-dna .typography-block h4,
+  #styleguide-dna .typography-block h5,
+  #styleguide-dna .typography-block h6 {
+      text-transform: lowercase;
+      font-weight: bold;
+      margin: 1rem 0;
+  }
+
+  #styleguide-dna .typography-block h1 {
+      font-weight: 700;
+      text-transform: lowercase;
+      font-size: 7vw;
+  }
+
+  #styleguide-dna .typography-block h2 {
+      font-size: 6.8vw;
+      text-transform: lowercase;
+  }
+
+  #styleguide-dna .typography-block h3:nth-child(1n) {
+      xmargin-bottom: 3vw;
+      color: #59616a;
+  }
+
+  #styleguide-dna .typography-block h3:nth-child(2n) {
+      xfont-weight: 500;
+      xmargin-bottom: 15px;
+      font-size: 6.6vw;
+  }
+
+  #styleguide-dna .typography-block span {
+      color: #6f787d;
+  }
+
+  #styleguide-dna .typography-block p,
+  #styleguide-dna .typography-block ul {
+      font-weight: normal;
+  }
+
+  #styleguide-dna .typography-block p {
+      margin-bottom: 15px;
+      line-height: 140%;
+  }
+
+  /* sectFive */
+
+  #styleguide-dna .color-circle.color-main {
+      background-color: #8cc4b3;
+  }
+
+  #styleguide-dna .color-circle.color-secondary {
+      background-color: #d4d3dc;
+  }
+
+  #styleguide-dna .color-circle.color-tertiary {
+      background-color: #a1d4e1;
+  }
+
+  #styleguide-dna .colors-wrapper:first-child {
+      padding-bottom: 15vw;
+  }
+
+  #styleguide-dna .colors-wrapper h3 {
+      color: #59616a;
+      margin-bottom: 4vw;
+      text-align: center;
+  }
+
+  #styleguide-dna .colors-row {
+      padding-bottom: 3vw;
+  }
+
+  #styleguide-dna .color-block {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+  }
+
+  #styleguide-dna .color-circle {
+      width: 75px;
+      height: 75px;
+      background-color: #787878;
+      clip-path: circle(50% at 50% 50%);
+      margin-bottom: 15px;
+  }
+
+  #styleguide-dna .color-block p {
+      color: #59616a;
+      margin: 0;
+      width: 100%;
+      text-align: center;
+
+  }
+
+  /* sectSix */
+
+  #styleguide-dna .btns-container-wrapper {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-content: center;
+      align-items: center;
+  }
+
+  #styleguide-dna .btns-container-wrapper .buttons-container {
+      padding: 15vw 5vw;
+  }
+
+  #styleguide-dna .buttons-container {
+      margin: 0 auto;
+      flex-flow: column;
+  }
+
+  #styleguide-dna .button-wrapper {
+      padding-bottom: 7vw;
+  }
+
+  #styleguide-dna .button-wrapper h3 {
+      color: #59616a;
+      margin-bottom: 3vw;
+      text-align: left;
+  }
+
+  #styleguide-dna .dark-backdrop .button-wrapper h3 {
+      color: #ffffff;
+  }
+
+  #styleguide-dna .buttons-row {
+      justify-content: flex-start;
+      align-content: flex-start;
+      padding: 0 15px;
+      margin-bottom: 4vw;
+  }
+
+  #styleguide-dna .buttons-row:last-of-type {
+      margin-bottom: 0;
+  }
+
+  #styleguide-dna .button-block {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      justify-content: flex-start;
+      align-items: flex-start;
+  }
+
+  #styleguide-dna .button-block p {
+      color: #59616a;
+      margin-top: 15px;
+      margin-bottom: 0;
+  }
+
+  #styleguide-dna .dark-backdrop .button-wrapper p {
+      color: #ffffff;
+  }
+
+  #styleguide-dna .btn {
+      background: transparent;
+      color: #59616a;
+      padding: 10px 30px;
+      border-radius: 0;
+      border: 0;
+      cursor: pointer;
+      font-size: 16px;
+  }
+
+  #styleguide-dna .btn-primary {
+      background-color: #8cc4b3;
+      outline: none;
+      border: none;
+  }
+
+  #styleguide-dna .btn-hover {
+      background-color: rgba(140, 196, 179, 0.4);
+  }
+
+  #styleguide-dna .btn-outlined {
+      background-color: transparent;
+      border: 1px #8cc4b3 solid;
+  }
+
+  #styleguide-dna .dark-backdrop .btn-outlined {
+      color: white;
+  }
+
+  #styleguide-dna .dark-backdrop .btn-outlined {
+      color: #ffffff;
+      border: 1px solid #ffffff;
+  }
+
+  #styleguide-dna .btn-text {
+      position: relative;
+      width: auto;
+      background: transparent;
+      color: #3b3b3b;
+      padding: 1px 0px 6px;
+      border-radius: 0;
+      border: 0;
+      cursor: pointer;
+      font-size: 18px;
+  }
+
+  #styleguide-dna .dark-backdrop .btn-text {
+      color: #ffffff;
+  }
+
+  #styleguide-dna .btn-text::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      background: #3b3b3b;
+  }
+
+  #styleguide-dna .dark-backdrop .btn-text::after {
+      background: #ffffff;
+  }
+
+  #styleguide-dna .btn-text-hover,
+  #styleguide-dna .dark-backdrop .btn-text-hover {
+      color: #7d838a;
+  }
+
+  #styleguide-dna .btn-text-hover::after,
+  #styleguide-dna .dark-backdrop .btn-text-hover::after {
+      background: #7d838a;
+  }
+
+  #styleguide-dna .dark-backdrop .btn-hover {
+      color: white
+  }
+
+  /* sectSeven */
+  #styleguide-dna .sectSeven-brandIcon {
+      text-align: center;
+  }
+
+  #styleguide-dna .sectSeven-brandIcon h2 {
+      margin-bottom: 40px;
+  }
+
+  #styleguide-dna .sectSeven-brandIcon p {
+      margin: 60px 60px;
+  }
+
+  #styleguide-dna .icon-container {
+      flex-flow: column;
+  }
+
+  #styleguide-dna .icon-wrapper {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+  }
+
+  #styleguide-dna .icon-row {
+      justify-content: space-evenly;
+      align-content: flex-start;
+  }
+
+  #styleguide-dna .icon-block {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+  }
+
+  #styleguide-dna .icon-block img {
+      width: 60%;
+  }
+
+  #styleguide-dna .icon-row .iconTwo {
+      width: 60%;
+  }
+
+  #styleguide-dna .icon-row .iconThree {
+      width: 60%;
+  }
+
+  /* sectSeven */
+
+  #styleguide-dna .samples-container {
+      flex-flow: column;
+  }
+
+  #styleguide-dna .samples-col {
+      flex-flow: column;
+  }
+
+  #styleguide-dna .samples-wrapper {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+  }
+
+  #styleguide-dna .samples-row {
+      justify-content: space-evenly;
+      align-content: flex-start;
+  }
+
+  #styleguide-dna .sample-block {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      margin: 5px;
+  }
+
+  #styleguide-dna .sample-block:nth-child(2) {
+      margin-top: 10px;
+  }
+
+  #styleguide-dna .sample-block::after {
+      content: attr(data-img-info);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #2a2d2e3d;
+      color: #ffffff;
+      padding: 9px;
+      transition: 2s;
+      font-size: 3vw;
+      display: none;
+  }
+
+  #styleguide-dna .sample-block:hover::after {
+      background: #2a2d2ea0;
+  }
+
+  @media (min-width: 580px) {
+
+      #styleguide-dna .typography-block h1 {
+          font-size: 3.2vw;
+      }
+
+      #styleguide-dna .typography-block h2 {
+          font-size: 3vw;
+      }
+
+      #styleguide-dna .typography-block h3:nth-child(2n) {
+          font-size: 2.9vw;
+      }
+  }
+
+  @media (min-width: 768px) {
+      #styleguide-dna .content-wrapper {
+          padding: 5vw;
+      }
+
+      #styleguide-dna .logoSVG,
+      #styleguide-dna .logoAlt {
+          padding: 5vw;
+      }
+
+      #styleguide-dna .fonts-wrapper .fontTwo {
+          margin-bottom: 0;
+      }
+
+      #styleguide-dna .fonts-wrapper .fontThree {
+          padding-left: 15px;
+      }
+
+      #styleguide-dna .typography-block {
+          padding-bottom: 0;
+      }
+
+      #styleguide-dna .typography-block h1 {
+          font-size: 3vw;
+      }
+
+      #styleguide-dna .typography-block h2 {
+          font-size: 2.8vw;
+      }
+
+      #styleguide-dna .typography-block h3:nth-child(2n) {
+          font-size: 2.6vw;
+      }
+
+      #styleguide-dna .colors-wrapper:first-child {
+          padding-bottom: 0;
+      }
+
+      #styleguide-dna .btns-container-wrapper .buttons-container {
+          padding: 5vw;
+      }
+
+      #styleguide-dna .buttons-container:first-child {
+          padding-right: 2.5vw;
+      }
+
+      #styleguide-dna .buttons-container:last-child {
+          padding-left: 2.5vw;
+      }
+
+      #styleguide-dna .button-wrapper {
+          padding-bottom: 0;
+      }
+
+      #styleguide-dna .button-wrapper h3 {
+          margin-top: 15px;
+          margin-bottom: 2vw;
+      }
+
+      #styleguide-dna .icon-row {
+          margin-bottom: 0;
+      }
+
+      #styleguide-dna .sample-block::after {
+          font-size: 1vw;
+      }
+  }
+
+  @media (min-width: 1366px) {
+      #styleguide-dna .typography-block h1 {
+          font-size: 2vw;
+      }
+
+      #styleguide-dna .typography-block h2 {
+          font-size: 1.8vw;
+      }
+
+      #styleguide-dna .typography-block h3:nth-child(2n) {
+          font-size: 1.6vw;
+      }
+  }
+
+  /* --------------------------------------Isotonix Styleguide ------------------------------------------*/
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+  #styleguide-ix .introLogo-container {
+
+      background-image: url(https://images.marketamerica.com/site/ix/responsive/images/menu/abstract--alt.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+
+  }
+
+
+  #styleguide-ix .lato,
+  #styleguide-ix .typography-block h1,
+  #styleguide-ix .typography-block h3:nth-child(2n) {
+
+      font-family: Lato, sans-serif;
+
+  }
+
+  #styleguide-ix .typography-container h1,
+  #styleguide-ix .typography-container h4 {
+
+      color: #0c7dac;
+
+  }
+
+  #styleguide-ix .typography-container h2,
+  #styleguide-ix .typography-container h5 {
+
+      color: #894082;
+
+  }
+
+  #styleguide-ix .ix-color-one {
+
+      background: #894082;
+
+  }
+
+  #styleguide-ix .ix-color-two {
+
+      background: #0c7dac;
+
+  }
+
+  #styleguide-ix .ix-color-three {
+
+      background: #ec6c21;
+
+  }
+
+  #styleguide-ix .ix-color-four {
+
+      background: #432040;
+
+  }
+
+  #styleguide-ix .ix-color-five {
+
+      background: #894082 linear-gradient(180deg, #894082 0, #432040 100%);
+
+  }
+
+
+  #styleguide-ix .ix-color-six {
+
+      background: #21201f;
+
+  }
+
+  #styleguide-ix .ix-color-seven {
+
+      background: #646463;
+
+  }
+
+  #styleguide-ix .ix-color-eight {
+
+      background: #7e7e7c;
+
+  }
+
+  #styleguide-ix .ix-color-nine {
+
+      background: #d7d7d6;
+
+  }
+
+  #styleguide-ix .ix-color-ten {
+
+      background: #f2f2f2;
+
+  }
+
+  #styleguide-ix .ix-color-eleven {
+
+      background: #f5f5f5;
+
+  }
+
+  #styleguide-ix .btn-primary {
+
+      color: #21201f;
+      background-color: #ec6c21;
+      border-color: #ec6c21;
+
+  }
+
+  #styleguide-ix .btn-primary:hover {
+
+      color: #21201f;
+      background-color: #e05f13;
+      border-color: #ec6c21;
+
+  }
+
+  #styleguide-ix .btn-secondary {
+
+      color: #fff;
+      background-color: #0c7dac;
+      border-color: #0c7dac;
+
+  }
+
+  #styleguide-ix .btn-secondary:hover {
+
+      background-color: #0fa0dc;
+      border-color: #0fa0dc;
+
+  }
+
+  #styleguide-ix .btn-default {
+
+      color: #21201f;
+      background-color: #d7d7d6;
+      border-color: #d7d7d6;
+
+  }
+
+  #styleguide-ix .btn-default:hover {
+
+      background-color: #bdbdbc;
+      border-color: #bdbdbc;
+
+  }
+
+  #styleguide-ix a {
+
+      color: #0c7dac;
+      text-decoration: none;
+
+  }
+
+  #styleguide-ix a:hover {
+
+      color: #0fa0dc;
+      text-decoration: underline;
+
+  }
+
+  #styleguide-ix .dark-backdrop a {
+
+      color: #bfbfff;
+
+  }
+
+  #styleguide-ix .dark-backdrop a:hover {
+
+      color: #bfbfff;
+
+  }
+
+  #styleguide-ix .logoAlt h2 {
+
+      color: #fff;
+
+  }
+
+  /* --------------------------------------- Layered ------------------------------------------------*/
+
+  #styleguide-layered .color-test-1 {
+      background-color: #F4D5BB;
+
+  }
+
+  #styleguide-layered .color-test-2 {
+      background-color: #F2E1D4;
+
+  }
+
+  #styleguide-layered .color-test-3 {
+      background-color: #F0ECE8;
+
+  }
+
+  #styleguide-layered .color-test-4 {
+      background-color: #21201F;
+
+  }
+
+  #styleguide-layered .color-test-5 {
+      background-color: #FFFFFF;
+      border: 1px solid #000000;
+      border-radius: 50%;
+
+  }
+
+  #styleguide-layered .color-test-6 {
+      background-color: #7D7A77;
+
+  }
+
+  #styleguide-layered .introLogo-container {
+      background-image: url(https://images.marketamerica.com/creative/2022/layered-bg-test/marbleBG.jpg);
+      background-size: cover;
+  }
+
+  #styleguide-layered h1,
+  #styleguide-layered h2 {
+      color: #000000;
+      font-family: montserrat,
+  }
+
+  #styleguide-layered .Montserrat,
+  #styleguide-layered .typography-block h1,
+  #styleguide-layered .typography-block h3:nth-child(2n) {
+
+      font-family: Montserrat, sans-serif;
+      color: #272525;
+
+  }
+
+  #styleguide-layered .typography-container h1,
+  #styleguide-layered .typography-container h4 #styleguide-layered .typography-container h3 {
+      color: #272525;
+
+  }
+
+  #styleguide-layered .typography-container h2,
+  #styleguide-layered .typography-container h5 {
+      color: #272525;
+  }
+
+  /* --------------------------------- Lumiere De View Styleguide ---------------------------------------*/
+
+  #styleguide-ldv .hero-img {
+      background: url('https://images.marketamerica.com/creative/2022/bootstrap-106021-ldv-styleguide/hero.jpg?v=1') no-repeat;
+      background-position: 80% 60%;
+      background-color: black;
+      background-size: cover;
+      padding-top: 20vh;
+      padding-bottom: 20vh;
+  }
+
+  #styleguide-ldv .logo-block h2 {
+      color: #fff;
+  }
+
+  #styleguide-ldv .bgc1 {
+      background-color: #999999;
+  }
+
+  #styleguide-ldv .bgc2 {
+      background-color: #dddddd;
+  }
+
+  #styleguide-ldv .pad-bottom {
+      padding-bottom: 15vw;
+  }
+
+
+  /*FONTS*/
+  #styleguide-ldv .fontOne {
+      font-family: bodoni-urw, serif;
+  }
+
+  #styleguide-ldv .fontTwo {
+      font-family: myriad-pro, sans-serif;
+      margin-bottom: 5vw;
+  }
+
+  #styleguide-ldv .smalltext {
+      font-size: .7em;
+  }
+
+
+  /*Colors*/
+  #styleguide-ldv .color1 {
+      background-color: #7f6c50;
+  }
+
+  #styleguide-ldv .color2 {
+      background-color: #b4a183;
+  }
+
+  #styleguide-ldv .color3 {
+      background-color: #eee4d6;
+  }
+
+  #styleguide-ldv .color4 {
+      /*background-color: #555555;*/
+      background-color: #696560;
+      /*border-radius: 50%;*/
+  }
+
+  #styleguide-ldv .color5 {
+      background-color: #ffffff;
+      border: 1px solid black;
+      border-radius: 50%;
+
+  }
+
+  #styleguide-ldv .color6 {
+      /*background-color: #555555;*/
+      background-color: #f5eeef;
+      /*border-radius: 50%;*/
+  }
+
+  #styleguide-ldv .color7 {
+      /*background-color: #555555;*/
+      background-color: #000000;
+      /*border-radius: 50%;*/
+  }
+
+  #styleguide-ldv .color8 {
+      background-color: #ffffff;
+      border: 1px solid black;
+      border-radius: 50%;
+
+  }
+
+  #styleguide-ldv .color9 {
+      /*background-color: #555555;*/
+      background-color: #b5b5b5;
+      /*border-radius: 50%;*/
+  }
+
+  /*button*/
+
+  #styleguide-ldv .btn {
+      color: #59616a;
+      padding: 10px 30px;
+      border-radius: 0 !important;
+      border: 0 !important;
+      cursor: pointer;
+      font-size: 16px;
+  }
+
+  #styleguide-ldv .btn-primary {
+      background-color: #696560;
+      color: #ffffff;
+  }
+
+  #styleguide-ldv .btn-hover {
+      background: #94908b !important;
+      color: #ffffff !important;
+  }
+
+  #styleguide-ldv .btn-primary-2 {
+      background: #B7A49E !important;
+      color: #ffffff !important;
+  }
+
+  #ldv-styleguide .btn-hover-2 {
+      background: #cdbfbb !important;
+      color: #ffffff !important;
+  }
+
+  #ldv-styleguide .btn-outlined {
+      border: 1px solid #787878;
+  }
+
+  #ldv-styleguide .btn-text-hover {
+      color: #b5b5b5;
+  }
+
+  #ldv-styleguide .dark-backdrop .btn-primary {
+      background: #ffffff !important;
+      color: #000000 !important;
+  }
+
+  #ldv-styleguide .dark-backdrop .btn-hover {
+      background: #b5b5b5 !important;
+      color: #000000 !important;
+  }
+
+  /*ICONS*/
+  #ldv-styleguide .icon-row .iconThree {
+      width: 20%;
+  }
+
+  /*SAMPLES*/
+  #ldv-styleguide .sample-wrapper {
+      margin: 20px 0 0 0;
+  }
+
+  /* -------------------------------------Royal Spa styles ----------------------------------------------*/
+
+  #styleguide-royal-spa h1 {
+      font-family: montserrat, sans-serif;
+      font-weight: 400;
+      text-transform: uppercase;
+  }
+
+  #styleguide-royal-spa h2 {
+      font-family: montserrat, sans-serif;
+      font-weight: 300;
+      text-transform: uppercase;
+  }
+
+  #styleguide-royal-spa h3 {
+      font-family: montserrat, sans-serif;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: #779cad;
+  }
+
+  #styleguide-royal-spa h4 {
+      font-family: montserrat, sans-serif;
+      font-weight: 400;
+      text-transform: uppercase;
+  }
+
+  #styleguide-royal-spa h4 span {
+      color: 779cad;
+  }
+
+  #styleguide-royal-spa h5 {
+      font-family: montserrat, sans-serif;
+      font-weight: 400;
+  }
+
+  #styleguide-royal-spa h6 {
+      font-family: montserrat, sans-serif;
+      font-weight: 500;
+  }
+
+  #styleguide-royal-spa p {
+      font-family: montserrat, sans-serif;
+      font-weight: 400;
+  }
+
+  #styleguide-royal-spa li {
+      font-family: montserrat, sans-serif;
+      font-weight: 400;
+      line-height: 1.5em;
+  }
+
+
+  /* COLOR */
+  #styleguide-royal-spa .color-circle-1 {
+      background-color: #779cad;
+  }
+
+  #styleguide-royal-spa .color-circle-2 {
+      background-color: #69bab7;
+  }
+
+  #styleguide-royal-spa .color-circle-3 {
+      background-color: #e9e9e9;
+  }
+
+  #styleguide-royal-spa .color-circle-4 {
+      background-color: #c0cacd;
+  }
+
+  #styleguide-royal-spa .color-circle-5 {
+      background-color: #ffffff;
+      border-style: solid;
+      border-color: 000000;
+      border-width: 2px;
+      border-radius: 50%;
+  }
+
+  #styleguide-royal-spa .color-circle-6 {
+      background-color: #000000;
+  }
+
+  /* BUTTONS
+       */
+  #styleguide-royal-spa .btn-primary {
+      background-color: #779cad;
+      border: none;
+      border-radius: 0;
+  }
+
+  #styleguide-royal-spa .btn-hover {
+      background-color: #445d68;
+      border: none;
+      border-radius: 0;
+      color: #ffffff;
+  }
+
+  #styleguide-royal-spa .btn-outlined {
+      border-style: solid;
+      border-color: #000000;
+      border-radius: 0;
+      color: #000000;
+  }
+
+  #styleguide-royal-spa .introLogo-container {
+      background-image: url('https://images.marketamerica.com/creative/2022/RoyalSpa-106025-InteractiveStyleGuide2022/hero-img-1-min.jpg');
+      background-size: cover;
+  }
+
+  #styleguide-royal-spa .dark-backdrop .btn-primary {
+      background-color: #ffffff;
+      color: #000000;
+      border: none;
+      border-radius: 0;
+  }
+
+  #styleguide-royal-spa .dark-backdrop .btn-hover {
+      background-color: #779cad;
+      border: none;
+      border-radius: 0;
+      color: #ffffff;
+  }
+
+  #styleguide-royal-spa .dark-backdrop .btn-outlined {
+      border-style: solid;
+      border-color: #ffffff;
+      border-radius: 0;
+      color: #ffffff;
+  }
+
+  #styleguide-royal-spa .sectEight-brandSamples img {
+      border-style: solid;
+      border-color: #779cad;
+      border-radius: 0;
+  }
+
+  /* -------------------------------------------TLS Styleguide --------------------------------------- */
+
+  /* Fonts */
+  @import url('https://fonts.cdnfonts.com/css/gill-sans-nova?styles=15720,15701,15717,15722,15724,15712,15714,15718');
+
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+  /* Set core body defaults */
+  #styleguide-tls body {
+      min-height: 100vh;
+      text-rendering: optimizeSpeed;
+      font-family: 'Lato', Helvetica, sans-serif;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #2a2d2e;
+  }
+
+  /* A elements that don't have a class get default styles */
+  #styleguide-tls a:not([class]) {
+      text-decoration-skip-ink: auto;
+  }
+
+  /* Make images easier to work with */
+  #styleguide-tls img,
+  #styleguide-tls picture {
+      max-width: 100%;
+      display: block;
+  }
+
+  /* Inherit fonts for inputs and buttons */
+  #styleguide-tls input,
+  #styleguide-tls button,
+  #styleguide-tls textarea,
+  #styleguide-tls select {
+      font: inherit;
+  }
+
+  /* Global Classes */
+  #styleguide-tls .circle {
+      border-radius: 50%;
+  }
+
+  #styleguide-tls .no-padding {
+      padding-right: 0 !important;
+      padding-left: 0 !important;
+  }
+
+  /* Sections globals */
+  #styleguide-tls .secTitle {
+      padding: 2vw;
+      font-size: 1.5em;
+      color: #ffffff;
+      background: #145f88;
+      margin: 0;
+      /* border-top: 1px solid #e5e5e5; */
+      /* border-bottom: 1px solid #e5e5e5; */
+      margin-left: -15px;
+      margin-right: -15px;
+  }
+
+  #styleguide-tls .content-wrp {
+      padding: 5vw;
+  }
+
+  /* sectOne */
+
+  #styleguide-tls .introLogo-ctr {
+      padding: 20vw;
+  }
+
+
+  /* sectTwo */
+
+  #styleguide-tls .logos-ctr h2 {
+      align-self: flex-start;
+      margin-bottom: 15px;
+  }
+
+  #styleguide-tls .logoSVG {
+      padding: 5vw;
+  }
+
+  #styleguide-tls .logoAlt {
+      background-color: #239ddfb3;
+      padding: 5vw;
+  }
+
+  #styleguide-tls .logoAlt h2 {
+      color: #ffffff;
+  }
+
+  #styleguide-tls .logo-blk {
+      margin-top: 3vw;
+  }
+
+  #styleguide-tls .logo-blk:first-of-type {
+      margin-top: 0;
+  }
+
+  /* sectThree */
+
+  #styleguide-tls .fonts-row {
+      padding-bottom: 5vw;
+  }
+
+  #styleguide-tls .fonts-row:last-of-type {
+      padding-bottom: 0;
+  }
+
+  #styleguide-tls .fonts-row h3 {
+      font-family: 'Lato', Helvetica, sans-serif;
+      margin-bottom: 2vw;
+      color: #59616a;
+      font-size: 1.8em;
+  }
+
+  #styleguide-tls .fonts-wrp {
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+
+
+  #styleguide-tls .fontOne {
+      font-family: 'Gill Sans', sans-serif;
+  }
+
+  #styleguide-tls .fontOne h1 {
+      margin-bottom: 5px;
+      color: #2a2d2e;
+      font-size: 4.8em;
+      font-weight: 100;
+  }
+
+  #styleguide-tls .fontOne p {
+      margin-bottom: 2px;
+      color: #59616a;
+      font-size: 1.4em;
+      font-weight: lighter;
+  }
+
+  #styleguide-tls .fontOne a {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f66a5;
+      font-size: 1.2em;
+      text-decoration: none;
+  }
+
+  #styleguide-tls .fontTwo {
+      font-family: 'lato', sans-serif;
+  }
+
+  #styleguide-tls .fontTwo h1 {
+      margin-bottom: 5px;
+      color: #2a2d2e;
+      font-size: 3.8em;
+      font-weight: 500;
+  }
+
+  #styleguide-tls .fontTwo p {
+      margin-bottom: 2px;
+      color: #59616a;
+      font-size: 1.4em;
+      font-weight: 500;
+  }
+
+  #styleguide-tls .fontTwo a {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f66a5;
+      font-size: 1.2em;
+      text-decoration: none;
+  }
+
+  #styleguide-tls .fontThree {
+      font-family: 'Montserrat', sans-serif;
+  }
+
+  #styleguide-tls .fontThree h1 {
+      margin-bottom: 5px;
+      font-size: 3.8em;
+      font-weight: bold;
+  }
+
+  #styleguide-tls .fontThree p {
+      margin-bottom: 2px;
+      color: #59616a;
+      font-size: 1.4em;
+      font-weight: bold;
+  }
+
+  #styleguide-tls .fontThree a {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f66a5;
+      font-size: 1.2em;
+      text-decoration: none;
+  }
+
+  /* sectFour */
+
+  #styleguide-tls .typo-blk {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+  }
+
+  #styleguide-tls .typo-blk h1,
+  #styleguide-tls .typo-blk h2,
+  #styleguide-tls .typo-blk h3,
+  #styleguide-tls .typo-blk h4,
+  #styleguide-tls .typo-blk h5,
+  #styleguide-tls .typo-blk h6 {
+      margin-bottom: 15px;
+  }
+
+  #styleguide-tls .typo-blk h1 {
+      font-family: 'Gill Sans', serif;
+      font-size: 2.2em;
+      font-weight: 700;
+      text-transform: uppercase;
+  }
+
+  #styleguide-tls .typo-blk h2 {
+      font-size: 2.4em;
+  }
+
+  #styleguide-tls .typo-blk h3:nth-child(1n) {
+      font-family: 'Lato', Helvetica, sans-serif;
+      margin-bottom: 4vw;
+      color: #59616a;
+      font-size: 1.8em;
+  }
+
+  #styleguide-tls .typo-blk h3:nth-child(2n) {
+      font-family: 'Gill Sans', serif;
+      font-size: 2.6em;
+      font-weight: 500;
+      margin-bottom: 15px;
+  }
+
+  #styleguide-tls .typo-blk span {
+      color: #6f787d;
+  }
+
+  #styleguide-tls .typo-blk p,
+  #styleguide-tls .typo-blk ul {
+      font-weight: normal;
+  }
+
+  #styleguide-tls .typo-blk p {
+      margin-bottom: 15px;
+  }
+
+  #styleguide-tls .typo-blk p:nth-child(2n) {
+      font-size: 1.25em;
+  }
+
+  /* sectFive */
+
+
+  #styleguide-tls .colors-wrp h3 {
+      font-family: 'Lato', Helvetica, sans-serif;
+      color: #59616a;
+      font-size: 1.8em;
+      margin-bottom: 4vw;
+      text-align: center;
+  }
+
+  #styleguide-tls .colors-row {
+      padding-bottom: 3vw;
+  }
+
+  #styleguide-tls .color-blk {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+  }
+
+  #styleguide-tls .color-crcl-first {
+      width: 100px;
+      height: 100px;
+      background-color: #31b1e6;
+      clip-path: circle(50% at 50% 50%);
+      margin-bottom: 15px;
+  }
+
+  #styleguide-tls .color-crcl-second {
+      width: 100px;
+      height: 100px;
+      background-color: #145f88;
+      clip-path: circle(50% at 50% 50%);
+      margin-bottom: 15px;
+  }
+
+  #styleguide-tls .color-crcl-third {
+      width: 100px;
+      height: 100px;
+      background: #239ddfb3;
+      clip-path: circle(50% at 50% 50%);
+      margin-bottom: 15px;
+
+  }
+
+  #styleguide-tls .color-crcl-snd-first {
+      width: 100px;
+      height: 100px;
+      background-color: rgb(88, 85, 85);
+      clip-path: circle(50% at 50% 50%);
+      margin-bottom: 15px;
+  }
+
+  #styleguide-tls .color-crcl-snd-second {
+      width: 100px;
+      height: 100px;
+      background-color: rgb(242, 242, 242);
+      clip-path: circle(50% at 50% 50%);
+      margin-bottom: 15px;
+  }
+
+  #styleguide-tls .color-crcl-snd-third {
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(90deg, rgb(35, 157, 223), rgb(20, 95, 136));
+      clip-path: circle(50% at 50% 50%);
+      margin-bottom: 15px;
+
+  }
+
+  #styleguide-tls .color-blk p {
+      color: #59616a;
+  }
+
+
+  /* sectSix */
+
+  #styleguide-tls .sectSix-brandButtons .buttons-ctr {
+      max-width: 950px;
+      margin: 0 auto;
+      flex-flow: column;
+  }
+
+  #styleguide-tls .button-wrp p {
+      font-family: 'Lato', Helvetica, sans-serif;
+      color: #59616a;
+      font-size: 1.2em;
+      margin-bottom: 3vw;
+      text-align: center;
+  }
+
+  #styleguide-tls .buttons-row {
+      justify-content: space-evenly;
+      align-content: flex-start;
+      margin-bottom: 4vw;
+  }
+
+  #styleguide-tls .buttons-row:last-of-type {
+      margin-bottom: 0;
+  }
+
+  #styleguide-tls .button-blk {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+  }
+
+  #styleguide-tls .button-blk p {
+      color: #59616a;
+      font-size: .9em;
+      margin-top: 15px;
+      margin-bottom: 0;
+  }
+
+  #styleguide-tls .button-blk .btn {
+      background: transparent;
+      color: #59616a;
+      padding: 15px 30px;
+      border-radius: 5px;
+      border: 0;
+      cursor: pointer;
+  }
+
+  #styleguide-tls .btn.btn-default {
+      color: #fff;
+      background-color: #585555;
+      border-color: #585555;
+  }
+
+  #styleguide-tls .btn.btn-default:hover {
+      color: #fff;
+      background-color: #726e6e;
+      border-color: #726e6e;
+  }
+
+  #styleguide-tls .btn.btn-primary {
+      color: #3e3c3c;
+      background-color: #c6e605;
+      border-color: #c6e605;
+  }
+
+  #styleguide-tls .btn.btn-primary:hover {
+      color: #3e3c3c;
+      background-color: #b1cd04;
+      border-color: #b1cd04;
+  }
+
+  #styleguide-tls .btn.btn-secondary {
+      color: #fff;
+      background-color: #145f88;
+      border-color: #145f88;
+  }
+
+  #styleguide-tls .btn.btn-secondary:hover {
+      color: #fff;
+      background-color: #0d405c;
+      border-color: #0d405c;
+  }
+
+  /* sectSeven */
+
+  #styleguide-tls .icon-ctr {
+      flex-flow: column;
+  }
+
+  #styleguide-tls .icon-wrp {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+  }
+
+  #styleguide-tls .icon-row {
+      justify-content: space-evenly;
+      align-content: flex-start;
+      margin-bottom: 4vw;
+  }
+
+  #styleguide-tls .icon-blk {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+  }
+
+  #styleguide-tls .icon-blk img {
+      width: 100%;
+  }
+
+  #styleguide-tls .icon-row .iconTwo {
+      width: 65%;
+  }
+
+  #styleguide-tls .icon-row .iconThree {
+      width: 35%;
+  }
+
+  /* sectSeven */
+
+  #styleguide-tls .samples-ctr {
+      flex-flow: column;
+  }
+
+  #styleguide-tls .samples-col {
+      flex-flow: column;
+  }
+
+  #styleguide-tls .samples-wrp {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+  }
+
+  #styleguide-tls .samples-row {
+      justify-content: space-evenly;
+      align-content: flex-start;
+  }
+
+  #styleguide-tls .sample-blk {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      margin: 5px;
+  }
+
+  #styleguide-tls .sample-blk:nth-child(2) {
+      margin-top: 10px;
+  }
+
+  #styleguide-tls .sample-blk::after {
+      content: attr(data-img-info);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #2a2d2e3d;
+      color: #ffffff;
+      padding: 9px;
+      transition: 2s;
+  }
+
+  #styleguide-tls .sample-blk:hover::after {
+      background: #2a2d2ea0;
+  }

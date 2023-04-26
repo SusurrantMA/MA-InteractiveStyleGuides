@@ -1,0 +1,41 @@
+/* --- nav ---*/
+#styleguide .navbar {
+    background-color: #000 !important;
+    border-bottom: 1px solid #fff !important;
+}
+
+#styleguide .navbar-brand {
+    width: 60%;
+}
+
+#styleguide .navbar li a {
+    color: #fff;
+}
+
+#styleguide .navbar li a:hover {
+    color: #000;
+    background-color: #FEE834;
+}
+
+#styleguide .dropdown-menu {
+    background-color: #fff;
+}
+
+#styleguide .dropdown-menu li a {
+    color: #000;
+}
+
+#styleguide .toggle-color {
+    background-color: #fff;
+}
+
+
+@media (min-width: 576px) {
+
+
+    #styleguide .navbar-brand {
+        width: 25%;
+    }
+
+
+}

@@ -1,0 +1,38 @@
+ /* --- YOUR CODE STARTS HERE --- */
+ :root {
+     /* --- colors --- */
+     --black: #000;
+     --dark--gray: #585555;
+     --light--gray: #eee;
+     --transparent: transparent;
+     --white: #fff;
+
+     /* --- fonts --- */
+
+     /* --- universal font - replaces gotham for web --- */
+     --font__montserrat: 'Montserrat', sans-serif;
+
+     /* --- tls font --- */
+     --font__lato: "Lato", sans-serif;
+
+     /* --- motives font --- */
+     --font__bodoni: 'Bodoni Moda', serif;
+
+
+     --font--size: 18px;
+
+     /* --- Branding colors --- */
+
+     /* --- TLS --- */
+     --tls__light--blue: #239ddf;
+     --tls__dark--blue: #145f88;
+     --tls__green: #c6e605;
+     --tls__orange: #fabe78;
+
+
+     /* --- Motives --- */
+
+     /* --- Layered --- */
+
+     /* --- LDV --- */
+ }
